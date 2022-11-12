@@ -1,7 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    fetch('http://api.nessieisreal.com/customers?key=be19ccd868157d152650c0603639e19d')
+      .then(response=>response.json())
+      .then((json) => {
+          console.log(json);
+        }
+      );
+
+  },[])
+
   return (
     <div className="App">
       <header className="App-header">
