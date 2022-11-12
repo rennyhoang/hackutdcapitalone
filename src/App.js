@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    fetch('http://api.nessieisreal.com/customers?key=be19ccd868157d152650c0603639e19d')
+    fetch('http://api.nessieisreal.com/accounts/be19ccd868157d152650c0603639e19d/customers?key=be19ccd868157d152650c0603639e19d')
       .then(response=>response.json())
       .then((json) => {
           console.log(json);
